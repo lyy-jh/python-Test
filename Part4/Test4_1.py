@@ -22,7 +22,8 @@
     删除目标字符串左边的空格
 10.rstrip
     删除目标字符串右边的空格
-11 strip
+11 strip(chars)
+    如果chars不写，默认删除空格；如果指定字符，则字符串中所有指定字符的都会被删除
     删除目标字符串两边的空格
 
 
@@ -58,13 +59,25 @@ print(str6)
 str7 = str1.center(100, "*")
 print(str7)
 
-# lstrip
+
 str8 = "   123   "
 print(str8)
-
+# lstrip
 print(str8.lstrip())
+# rstrip
 print(str8.rstrip())
+# strip
 print(str8.strip())
 
+# strip删除字符串中所有匹配的指定字符
+str9 = "abcdabc"
+# 打印结果：d
+print(str9.strip("abc"))
 
+str10 = "The difference between who you are and who you want to be is what you do."
+# 打印结果：difference between who you are and who you want to be is what you
+print(str10.strip("Thedo."))
 
+str11 = "www.example.com"
+# 打印结果：example
+print(str11.strip("cmowz."))
