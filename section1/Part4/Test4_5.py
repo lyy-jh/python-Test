@@ -19,6 +19,21 @@
     list2 = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
 
 嵌套列表中所有元素的遍历
+    for sub_list in list2:
+    # 判断sub_list是否为列表
+    if type(sub_list) ==list:
+        for i in sub_list:
+            print(i, end="\t")
+    else:
+        print(sub_list, end="\t")
+
+
+快速生成list
+    1.快速生成一个0~9的list
+        list3 = list(range(0, 10))
+    2.快速生成十个0的list
+        list4 = [0 for i in range(10)]
+
 
 
 """
@@ -43,3 +58,11 @@ for sub_list in list2:
             print(i, end="\t")
     else:
         print(sub_list, end="\t")
+print()
+
+# 快速生成0~9的list
+list3 = list(range(0, 10))
+print(list3)
+# 快速生成十个0的list
+list4 = [0 for i in range(10)]
+print(list4)
